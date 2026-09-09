@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body, #root { min-height: 100%; background: #0C0C0C; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Kanit', sans-serif; color: #D7E2EA; overflow-x: clip; }
+button, a { -webkit-tap-highlight-color: transparent; }
+
+.hero-heading {
+  background: linear-gradient(180deg, #646973 0%, #BBCCD7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-button {
+  position: relative;
+  isolation: isolate;
+  background: linear-gradient(123deg, #18011F 7%, #B600A8 37%, #7621B0 72%, #BE4C00 100%);
+  box-shadow: 0px 4px 4px rgba(181, 1, 167, 0.25), 4px 4px 12px #7721B1 inset;
+}
+
+.contact-button::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: -3px;
+  border: 2px solid #fff;
+  border-radius: inherit;
+  opacity: .95;
+}
+
+.marquee-image { transform: translateZ(0); }
+
+@media (max-width: 639px) {
+  .project-card-title { max-width: 8rem; }
+}
