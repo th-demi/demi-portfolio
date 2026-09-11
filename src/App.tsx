@@ -17,26 +17,21 @@ import {
 const portraitUrl = '/hero/avatar-demi.png'
 
 const marqueeImages = [
+  // Row 1
   'marquee/next-js.png',
-  'marquee/payments.png',
+  'marquee/ai.png',
   'marquee/github.png',
+  'marquee/docker.jpg',
+  'marquee/linux.png',
+  'marquee/fast-api.png',
+
+  // Row 2
   'marquee/aws.png',
-  'https://motionsites.ai/assets/hero-vitara-preview-Cjz2QYyU.gif',
-  'https://motionsites.ai/assets/hero-terra-preview-BFjrCr7T.gif',
-  'https://motionsites.ai/assets/hero-skyelite-preview-DHaZIgUv.gif',
-  'https://motionsites.ai/assets/hero-aethera-preview-DknSlcTa.gif',
-  'https://motionsites.ai/assets/hero-designpro-preview-D8c5_een.gif',
-  'https://motionsites.ai/assets/hero-stellar-ai-preview-D3HL6bw1.gif',
-  'https://motionsites.ai/assets/hero-xportfolio-preview-D4A8maiC.gif',
-  'https://motionsites.ai/assets/hero-orbit-web3-preview-BXt4OttD.gif',
-  'https://motionsites.ai/assets/hero-nexora-preview-cx5HmUgo.gif',
-  'https://motionsites.ai/assets/hero-evr-ventures-preview-DZxeVFEX.gif',
-  'https://motionsites.ai/assets/hero-planet-orbit-preview-DWAP8Z1P.gif',
-  'https://motionsites.ai/assets/hero-new-era-preview-CocuDUm9.gif',
-  'https://motionsites.ai/assets/hero-wealth-preview-B70idl_u.gif',
-  'https://motionsites.ai/assets/hero-luminex-preview-CxOP7ce6.gif',
-  'https://motionsites.ai/assets/hero-celestia-preview-0yO3jXO8.gif',
-  'marquee/docker.png',
+  'marquee/redis.png',
+  'marquee/python.png',
+  'marquee/git.png',
+  'marquee/go.png',
+  'marquee/db.png',
 ]
 
 const decorativeImages = {
@@ -232,16 +227,23 @@ function MarqueeRow({ images, direction }: { images: string[]; direction: 'left'
     return () => window.removeEventListener('resize', measure)
   }, [])
 
-  const baseOffset = useTransform(scrollY, (value) => (value - sectionTop + window.innerHeight) * 0.3)
-  const x = useTransform(baseOffset, (value) => (direction === 'right' ? value - 200 : -(value - 200)))
+  const baseOffset = useTransform(scrollY, (value) => (value - sectionTop + window.innerHeight) * 0.15)
+  const x = useTransform(baseOffset, (value) => (direction === 'right' ? -value : value))
   const springX = useSpring(x, { stiffness: 120, damping: 30, mass: 0.2 })
-  const tiles = [...images, ...images, ...images]
+  const tiles = [...images, ...images, ...images, ...images]
 
   return (
     <div ref={ref} className="overflow-hidden">
       <motion.div className="flex w-max gap-3 will-change-transform" style={{ x: springX }}>
         {tiles.map((src, index) => (
-          <img key={`${src}-${index}`} src={src} alt="Selected work preview" loading="lazy" className="marquee-image h-[270px] w-[420px] shrink-0 rounded-2xl object-cover" />
+          <img 
+            key={`${src}-${index}`} 
+            src={src} 
+            alt="Selected work preview" 
+            loading="lazy" 
+            className="marquee-image h-[270px] w-[420px] shrink-0 rounded-2xl object-cover select-none" 
+            draggable="false"
+          />
         ))}
       </motion.div>
     </div>
@@ -249,11 +251,14 @@ function MarqueeRow({ images, direction }: { images: string[]; direction: 'left'
 }
 
 function MarqueeSection() {
+  const row1 = marqueeImages.slice(0, 6)
+  const row2 = marqueeImages.slice(6, 12)
+
   return (
     <section aria-label="Motion work previews" className="overflow-hidden bg-[#0C0C0C] pt-24 pb-10 sm:pt-32 md:pt-40">
       <div className="flex flex-col gap-3">
-        <MarqueeRow images={marqueeImages.slice(0, 11)} direction="right" />
-        <MarqueeRow images={marqueeImages.slice(11)} direction="left" />
+        <MarqueeRow images={row1} direction="right" />
+        <MarqueeRow images={row2} direction="left" />
       </div>
     </section>
   )
