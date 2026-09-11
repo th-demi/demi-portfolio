@@ -51,6 +51,7 @@ const projects = [
 number: '01',
 category: 'Personal',
 name: 'RAGnarok',
+url: 'https://demi-ragnarok.vercel.app/',
 images: [
 'projects/rag/1.png',
 'projects/rag/2.png',
@@ -61,6 +62,7 @@ images: [
 number: '02',
 category: 'Backend',
 name: 'Payment Infrastructure',
+url: 'https://github.com/th-demi/payments_infrastructure',
 images: [
 'projects/payment-infrastructure/1.png',
 'projects/payment-infrastructure/2.png',
@@ -71,6 +73,7 @@ images: [
 number: '03',
 category: 'Client',
 name: 'GSIM Website',
+url: 'https://www.goodshepherdim.com/',
 images: [
 'projects/gsim-website/1.png',
 'projects/gsim-website/2.png',
@@ -122,10 +125,12 @@ function ContactButton() {
   )
 }
 
-function LiveProjectButton() {
+function LiveProjectButton({ url }: { url: string }) {
   return (
     <a
-      href="#contact"
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
       className="inline-flex shrink-0 items-center justify-center rounded-full border-2 border-[#D7E2EA] px-2.5 py-2 text-[8px] font-medium uppercase tracking-[0.12em] text-[#D7E2EA] transition-colors hover:bg-[#D7E2EA]/10 sm:px-6 sm:py-2.5 sm:text-xs md:px-8 md:py-3 md:text-sm"
     >
       Live project <ArrowUpRight className="ml-1 h-3 w-3 sm:ml-1.5 sm:h-3.5 sm:w-3.5" strokeWidth={2.2} />
@@ -368,7 +373,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               <h3 className="project-card-title text-[clamp(0.95rem,2.2vw,2rem)] font-medium uppercase leading-none text-[#D7E2EA]">{project.name}</h3>
             </div>
           </div>
-          <LiveProjectButton />
+          <LiveProjectButton url={project.url} />
         </div>
 
         <div className="grid grid-cols-[40%_1fr] gap-2 sm:gap-3 md:gap-4">
@@ -397,7 +402,7 @@ function ProjectsSection() {
         <div className="flex items-center gap-4">
           <a href="mailto:mariademetrius6@gmail.com" className="transition-colors hover:text-[#D7E2EA]" aria-label="Email Demi"><Mail className="h-4 w-4" /></a>
           <a href="#top" className="transition-colors hover:text-[#D7E2EA]" aria-label="Back to top"><MoveDown className="h-4 w-4 rotate-180" /></a>
-          <a href="#top" className="transition-colors hover:text-[#D7E2EA]" aria-label="Demi on Instagram"><Instagram className="h-4 w-4" /></a>
+          <a href="https://www.instagram.com/th_demi/" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-[#D7E2EA]" aria-label="Demi on Instagram"><Instagram className="h-4 w-4" /></a>
         </div>
       </footer>
     </section>
