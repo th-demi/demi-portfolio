@@ -193,9 +193,9 @@ function HeroSection() {
         </h1>
       </FadeIn>
 
-      <FadeIn delay={0.6} y={30} className="absolute left-0 right-0 top-1/2 z-10 mx-auto w-[280px] -translate-y-1/2 sm:top-auto sm:bottom-8 sm:w-[360px] sm:translate-y-0 md:w-[440px] lg:w-[520px]">
+      <FadeIn delay={0.6} y={30} className="absolute left-0 right-0 top-1/2 z-10 mx-auto w-[280px] sm:top-auto sm:bottom-8 sm:w-[360px] md:w-[440px] lg:w-[520px]">
         <Magnet>
-          <img src={portraitUrl} alt="Demi, Software Developer" className="block w-full select-none" draggable="false" />
+          <img src={portraitUrl} alt="Demi, Software Developer" className="block w-full select-none -translate-y-1/2 sm:translate-y-0" draggable="false" />
         </Magnet>
       </FadeIn>
 
