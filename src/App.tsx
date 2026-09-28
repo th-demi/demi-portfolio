@@ -176,7 +176,7 @@ function HeroSection() {
         <nav aria-label="Main navigation" className="mx-auto flex max-w-[1700px] items-center justify-between gap-3">
           {[
             ['About', '#about'],
-            ['Price', '#services'],
+            ['Services', '#services'],
             ['Projects', '#projects'],
             ['Contact', '#contact'],
           ].map(([label, href]) => (
@@ -398,7 +398,7 @@ function ProjectsSection() {
     <section id="projects" className="relative z-20 -mt-10 rounded-t-[40px] bg-[#0C0C0C] px-5 pt-20 pb-12 sm:-mt-12 sm:rounded-t-[50px] sm:px-8 sm:pt-24 md:-mt-14 md:rounded-t-[60px] md:px-10 md:pt-32 md:pb-20">
       <div className="mx-auto max-w-7xl">
         <FadeIn y={40}>
-          <h2 className="hero-heading mb-12 text-center text-[clamp(3rem,12vw,160px)] font-black uppercase leading-none tracking-tight sm:mb-16 md:mb-20">Project</h2>
+          <h2 className="hero-heading mb-12 text-center text-[clamp(3rem,12vw,160px)] font-black uppercase leading-none tracking-tight sm:mb-16 md:mb-20">Projects</h2>
         </FadeIn>
         {projects.map((project, index) => <ProjectCard key={project.number} project={project} index={index} />)}
       </div>
