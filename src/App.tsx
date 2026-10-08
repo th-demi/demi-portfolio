@@ -14,31 +14,31 @@ import {
   type MotionValue,
 } from 'framer-motion'
 
-const portraitUrl = '/hero/avatar-demi.png'
+const portraitUrl = '/hero/avatar-demi.webp'
 
 const marqueeImages = [
   // Row 1
-  'marquee/next-js.png',
-  'marquee/ai.png',
-  'marquee/github.png',
-  'marquee/docker.jpg',
-  'marquee/linux.png',
-  'marquee/fast-api.png',
+  'marquee/next-js.webp',
+  'marquee/ai.webp',
+  'marquee/github.webp',
+  'marquee/docker.webp',
+  'marquee/linux.webp',
+  'marquee/fast-api.webp',
 
   // Row 2
-  'marquee/aws.png',
-  'marquee/redis.png',
-  'marquee/python.png',
-  'marquee/git.png',
-  'marquee/go.png',
-  'marquee/db.png',
+  'marquee/aws.webp',
+  'marquee/redis.webp',
+  'marquee/python.webp',
+  'marquee/git.webp',
+  'marquee/go.webp',
+  'marquee/db.webp',
 ]
 
 const decorativeImages = {
-  docker: '/about/docker.png',
-  postgresql: '/about/postgresql.png',
-  aws: '/about/aws.png',
-  python: '/about/python.png',
+  docker: '/about/docker.webp',
+  postgresql: '/about/postgresql.webp',
+  aws: '/about/aws.webp',
+  python: '/about/python.webp',
 }
 
 const projects = [
@@ -48,9 +48,9 @@ category: 'Personal',
 name: 'RAGnarok',
 url: 'https://demi-ragnarok.vercel.app/',
 images: [
-'projects/rag/1.png',
-'projects/rag/2.png',
-'projects/rag/3.png',
+'projects/rag/1.webp',
+'projects/rag/2.webp',
+'projects/rag/3.webp',
 ],
 },
 {
@@ -59,9 +59,9 @@ category: 'Backend',
 name: 'Payment Infrastructure',
 url: 'https://github.com/th-demi/payments_infrastructure',
 images: [
-'projects/payment-infrastructure/1.png',
-'projects/payment-infrastructure/2.png',
-'projects/payment-infrastructure/3.png',
+'projects/payment-infrastructure/1.webp',
+'projects/payment-infrastructure/2.webp',
+'projects/payment-infrastructure/3.webp',
 ],
 },
 {
@@ -70,9 +70,9 @@ category: 'Client',
 name: 'GSIM Website',
 url: 'https://www.goodshepherdim.com/',
 images: [
-'projects/gsim-website/1.png',
-'projects/gsim-website/2.png',
-'projects/gsim-website/3.png',
+'projects/gsim-website/1.webp',
+'projects/gsim-website/2.webp',
+'projects/gsim-website/3.webp',
 ],
 },
 ]
