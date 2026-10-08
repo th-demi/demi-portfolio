@@ -2,7 +2,9 @@ import { useEffect, useRef, useState, type MouseEvent, type ReactNode } from 're
 import {
   ArrowDownRight,
   ArrowUpRight,
+  Github,
   Instagram,
+  Linkedin,
   Mail,
   MoveDown,
 } from 'lucide-react'
@@ -120,6 +122,31 @@ function ContactButton() {
   )
 }
 
+function HeroSocialLinks() {
+  return (
+    <div className="flex items-center gap-3 sm:gap-4">
+      <a
+        href="https://www.linkedin.com/in/th-demi/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Demi on LinkedIn"
+        className="inline-flex items-center justify-center rounded-full p-2.5 text-[#D7E2EA] transition-all duration-300 hover:bg-[#D7E2EA]/10 hover:text-white hover:-translate-y-1 sm:p-3 md:p-3.5"
+      >
+        <Linkedin className="h-5 w-5 sm:h-6 sm:w-6" strokeWidth={2} />
+      </a>
+      <a
+        href="https://github.com/th-demi"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Demi on GitHub"
+        className="inline-flex items-center justify-center rounded-full p-2.5 text-[#D7E2EA] transition-all duration-300 hover:bg-[#D7E2EA]/10 hover:text-white hover:-translate-y-1 sm:p-3 md:p-3.5"
+      >
+        <Github className="h-5 w-5 sm:h-6 sm:w-6" strokeWidth={2} />
+      </a>
+    </div>
+  )
+}
+
 function LiveProjectButton({ url }: { url: string }) {
   return (
     <a
@@ -206,7 +233,7 @@ function HeroSection() {
           </p>
         </FadeIn>
         <FadeIn delay={0.5} y={20}>
-          <ContactButton />
+          <HeroSocialLinks />
         </FadeIn>
       </div>
     </section>
